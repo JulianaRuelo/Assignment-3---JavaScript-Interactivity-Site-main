@@ -1,0 +1,40 @@
+/* ALWAYS INCL THESE @ TOP OF CSS DOCUMENT */
+*   {
+    box-sizing: border-box;
+}
+
+body, html {
+    min-height: 100vh;
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* END OF ALWAYS INCL */
+
+
+
+/* -------- the stuff below is for diff bg colors for diff pages */
+
+/* body{
+    background: linear-gradient(180deg, #F9A8BF 0%, #F9F6EF 35.1%);
+}
+
+body.darkPink{
+    background: #F576A7;
+}
+
+body.lightPink{
+    background: #F9A8BF;
+}
+
+body.offWhite{
+    background: #F9F6EF;
+}
+
+body.brown {
+    background: #4D0803;
+} */
+
