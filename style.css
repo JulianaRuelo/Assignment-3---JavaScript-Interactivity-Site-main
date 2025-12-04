@@ -17,7 +17,7 @@ img {
 -------BACKGROUND------
 -------------------- */
 body{
-    background: var(--dark-purple-gradient, linear-gradient(180deg, #200A3C 0%, #4A3395 100%));
+    background: var(--darkPurpleGradient, linear-gradient(180deg, #200A3C 0%, #4A3395 100%));
 }
 
 /* --------------------
@@ -34,18 +34,66 @@ body{
 }
 
 /* --------------------
-------TEXT LAYOUT------
+---------TEXT----------
 -------------------- */
 h1 {
     font-family: 'Nada';
-    font-size: 5vw;
+    font-size: 10vw;
     font-weight: 500;
     line-height: 1.6;
 }
 
 body {
     font-family: 'Dongle';
-    font-size: 1.5vw;
+    font-size: 2vw;
     color: #ACF5FF;
     padding: auto;
+}
+
+/* --------------------
+--------LAYOUT---------
+-------------------- */
+.primary-navBG {
+    text-align: center;
+    background: #F9F6EF;
+    padding: 15px 15px;
+    border-radius: 30px;
+    border: 10px solid #F9F6EF;
+    box-shadow: inset 0 0 0 1px #F576A7, 2px 4px 5px rgba(77, 8, 3, 0.2);
+    width: fit-content;
+}
+
+/* --------------------
+--------COLOURS--------
+-------------------- */
+.pink {
+    color: var(--pink, #FF9EE2);
+}
+
+.yellow {
+    color: #FFE8A3;
+}
+
+.blue {
+    color: #F9A8BF;
+}
+
+.darkPink {
+    color: #F576A7;
+}
+
+.choco {
+    color: #923B10;
+}
+
+.brown {
+    color: #4D0803;
+}
+
+.offWhite {
+    color: #F9F6EF;
+}
+
+.green {
+    color: #B9CB5F;
 }
