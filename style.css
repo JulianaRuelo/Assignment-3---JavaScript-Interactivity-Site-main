@@ -11,30 +11,41 @@ body, html {
 img {
     max-width: 100%;
 }
-
 /* END OF ALWAYS INCL */
 
-
-
-/* -------- the stuff below is for diff bg colors for diff pages */
-
-/* body{
-    background: linear-gradient(180deg, #F9A8BF 0%, #F9F6EF 35.1%);
+/* --------------------
+-------BACKGROUND------
+-------------------- */
+body{
+    background: var(--dark-purple-gradient, linear-gradient(180deg, #200A3C 0%, #4A3395 100%));
 }
 
-body.darkPink{
-    background: #F576A7;
+/* --------------------
+---------FONTS---------
+-------------------- */
+@font-face {
+    font-family: 'Nada';
+    src: url(assets/fonts/Nada/Nada.ttf) format('truetype');
 }
 
-body.lightPink{
-    background: #F9A8BF;
+@font-face {
+    font-family: 'Dongle';
+    src: url(assets/fonts/Dongle/Dongle-Regular.ttf) format('truetype');
 }
 
-body.offWhite{
-    background: #F9F6EF;
+/* --------------------
+------TEXT LAYOUT------
+-------------------- */
+h1 {
+    font-family: 'Nada';
+    font-size: 5vw;
+    font-weight: 500;
+    line-height: 1.6;
 }
 
-body.brown {
-    background: #4D0803;
-} */
-
+body {
+    font-family: 'Dongle';
+    font-size: 1.5vw;
+    color: #ACF5FF;
+    padding: auto;
+}
