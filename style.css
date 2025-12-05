@@ -36,18 +36,41 @@ body{
 /* --------------------
 ---------TEXT----------
 -------------------- */
-h1 {
+/* h1 {
     font-family: 'Nada';
     font-size: 10vw;
     font-weight: 500;
     line-height: 1.6;
-}
+} */
 
 body {
     font-family: 'Dongle';
     font-size: 2vw;
     color: #ACF5FF;
     padding: auto;
+}
+
+h1 {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    color: #ACF5FF;
+
+    text-align: center;
+    font-family: 'Nada';
+    font-size: 15vw;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h1:hover {
+    background: linear-gradient(270deg, #FFE875 0%, #FF7FD9 50%, #ACF5FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 1s;
 }
 
 /* --------------------
@@ -71,15 +94,15 @@ body {
 }
 
 .yellow {
-    color: #FFE8A3;
+    color: var(--yellow, #FFE875);
 }
 
 .blue {
-    color: #F9A8BF;
+    color: var(--blue, #ACF5FF);
 }
 
-.darkPink {
-    color: #F576A7;
+.darkPurpleGradient {
+    color: var(--darkPurpleGradient, linear-gradient(180deg, #200A3C 0%, #4A3395 100%));
 }
 
 .choco {
@@ -107,3 +130,33 @@ body {
     height: auto;
     z-index: -1;
 }
+
+.midAlign {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.midAlign.eyes {
+    position: absolute;
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0%;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+/* --------------------
+--------NOTES--------
+-------------------- */

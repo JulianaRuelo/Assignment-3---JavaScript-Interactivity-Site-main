@@ -29,14 +29,22 @@ var score = 0;
 //     }
 // })
 
-var notesLeft =["heart.svg", "star.svg", "drop.svg"] //<-- this is an array
+var notes =["heart.svg", "star.svg", "drop.svg"] //<-- this is an array
 var counter = 0;
-//unamed function
-$("#leftNote").on("click", function(){
-    var randomNum = Math.floor(Math.random()*notesLeft.length)
+
+$("#leftNote").on("click", function(leftNotePressed){
+    var randomNum = Math.floor(Math.random()*notes.length)
     console.log(randomNum)
-    $(this).attr("src", "assets/" + notesLeft[randomNum]);
-    if(counter == notesLeft.length -1)  {
-        counter = -1; //longform ver. like in processing
+    $(this).attr("src", "assets/" + notes[randomNum]);
+    if(counter == notes.length -1)  {
+        counter = -1;
+    }
+})
+$("#rightNote").on("click", function(rightNotePressed){
+    var randomNum = Math.floor(Math.random()*notes.length)
+    console.log(randomNum)
+    $(this).attr("src", "assets/" + notes[randomNum]);
+    if(counter == notes.length -1)  {
+        counter = -1;
     }
 })
