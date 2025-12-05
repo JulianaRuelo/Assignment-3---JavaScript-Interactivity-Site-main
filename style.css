@@ -97,3 +97,13 @@ body {
 .green {
     color: #B9CB5F;
 }
+
+/* --------------------
+--------IMAGES--------
+-------------------- */
+.fullSize {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -1;
+}
