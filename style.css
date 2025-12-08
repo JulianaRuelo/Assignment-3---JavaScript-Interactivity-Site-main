@@ -162,7 +162,7 @@ a:link {
 
 
 
-.midAlign {
+.hover_image {
     display: flex;
     width: auto;
     height: auto;
@@ -171,10 +171,24 @@ a:link {
     max-width: 100%;
     width: 100%;
     height: auto;
-    z-index: 1;
+    z-index: 1; 
+    transition: background-image 0.3s ease-in-out; 
 }
 
-.midAlign.eyes {
+    /*
+Source - https://stackoverflow.com/a
+Posted by Darío Pm, modified by community. See post 'Timeline' for change history
+Retrieved 2025-12-08, License - CC BY-SA 4.0
+*/
+
+.hover_image:hover {text-decoration: none} /* Optional (avoid undesired underscore if a is used as wrapper) */
+.hide {display:none}
+/* Do the shift: */
+.hover_image:hover img:first-child{display:none}
+.hover_image:hover img:last-child{display:inline-block}
+
+
+/* .menuEyes:hover {
     position: absolute;
     display: flex;
     width: auto;
@@ -186,7 +200,9 @@ a:link {
     width: 100%;
     height: auto;
     z-index: 1;
-}
+    background-image: url('assets/openEyes_hairBG.svg');
+    background-size: cover; /* Ensures the image covers the entire container 
+} */
 
 /* --------------------
 --------NOTES--------
