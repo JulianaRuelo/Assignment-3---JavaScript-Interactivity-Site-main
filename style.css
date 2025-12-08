@@ -160,3 +160,15 @@ h1:hover {
 /* --------------------
 --------NOTES--------
 -------------------- */
+
+.note {
+    position: absolute;
+    width: 100%;
+    height: 1.5rem;
+    top: -1.5rem;
+    animation-name: var(--darkPurpleGradient);
+    animation-timing-function: linear;
+    animation-duration: 3s;
+    animation-delay: 4.2s;
+    animation-play-state: paused;
+}
