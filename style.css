@@ -66,17 +66,23 @@ h1 {
 }
 
 h1:hover {
+    transition: 1s;
     background: linear-gradient(270deg, #FFE875 0%, #FF7FD9 50%, #ACF5FF 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    transition: 1s;
+    text-shadow: 10px 10px 0px #FF9EE2;
+}
+
+a:link {
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 /* --------------------
 --------LAYOUT---------
 -------------------- */
-.primary-navBG {
+.whiteContainer {
     text-align: center;
     background: #F9F6EF;
     padding: 15px 15px;
@@ -84,6 +90,18 @@ h1:hover {
     border: 10px solid #F9F6EF;
     box-shadow: inset 0 0 0 1px #F576A7, 2px 4px 5px rgba(77, 8, 3, 0.2);
     width: fit-content;
+}
+
+.grid-parent-split {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+}
+
+.centered { /* this centers it in the middle of the window */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 /* --------------------
