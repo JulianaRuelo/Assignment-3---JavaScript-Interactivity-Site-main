@@ -71,7 +71,7 @@ h1:hover {
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 10px 10px 0px #FF9EE2;
+    text-shadow: 0px 10px 0px #ACF5FF, 0px 20px 0px #FF7FD9;
 }
 
 a:link {
@@ -123,8 +123,8 @@ a:link {
     color: var(--darkPurpleGradient, linear-gradient(180deg, #200A3C 0%, #4A3395 100%));
 }
 
-.choco {
-    color: #923B10;
+.horizontalDawnGradient {
+    color: var(--horizontalDawnGradient, linear-gradient(270deg, #FFE875 0%, #FF7FD9 50%, #ACF5FF 100%));
 }
 
 .brown {
