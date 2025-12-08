@@ -344,3 +344,55 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 	transform-style: preserve-3d;
 	animation: loader-5-1 calc(var(--anim-duration) * 3) linear alternate-reverse infinite;
 }
+
+
+/* from Sadness on Code Pen --> https://codepen.io/sadness97/pen/mdOXzNW */
+	@-webkit-keyframes snowflakes-fall {
+		0% {
+			top: -10%
+		}
+		100% {
+			top: 100%
+		}
+	}
+	
+	@keyframes snowflakes-fall {
+		0% {
+			top: -10%
+		}
+		100% {
+			top: 100%
+		}
+	}
+	
+	.snowflake {
+		position: fixed;
+		top: -10%;
+		z-index: -2;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		-webkit-animation-name: snowflakes-fall;
+		-webkit-animation-duration: 10s, 3s;
+		-webkit-animation-timing-function: linear, ease-in-out;
+		-webkit-animation-iteration-count: infinite, infinite;
+		-webkit-animation-play-state: running;
+		animation-name: snowflakes-fall;
+		animation-duration: 10s, 3s;
+		animation-timing-function: linear, ease-in-out;
+		animation-iteration-count: infinite;
+		animation-play-state: running;
+	}
+	
+	.snowflake:nth-of-type(1) {
+		left: auto;
+		-webkit-animation-delay: 2s, 2s;
+		animation-delay: 2s, 2s
+	}
+	
+	.snowflake:nth-of-type(2) {
+		left: 60%;
+		-webkit-animation-delay: 2s, 2s;
+		animation-delay: 2s, 2s
+	}
