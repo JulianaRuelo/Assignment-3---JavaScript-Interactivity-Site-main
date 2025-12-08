@@ -63,6 +63,7 @@ h1 {
     font-size: 15vw;
     font-weight: 400;
     line-height: normal;
+    margin: 0px auto;
 }
 
 h1:hover {
@@ -108,11 +109,23 @@ a:link {
     grid-gap: 30px;
 }
 
-.centered { /* this centers it in the middle of the window */
+.container {
+  position: relative;
+  text-align: center;
+}
+
+.centered {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.bottom {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    z-index: -3;
 }
 
 /* --------------------
@@ -187,23 +200,6 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 .hover_image:hover img:first-child{display:none}
 .hover_image:hover img:last-child{display:inline-block}
 
-
-/* .menuEyes:hover {
-    position: absolute;
-    display: flex;
-    width: auto;
-    height: auto;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 0%;
-    max-width: 100%;
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    background-image: url('assets/openEyes_hairBG.svg');
-    background-size: cover; /* Ensures the image covers the entire container 
-} */
-
 /* --------------------
 --------NOTES--------
 -------------------- */
@@ -243,49 +239,6 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 .loader::after {
 	content: '';
 	position: absolute;
-}
-
-.item	{
-	background: rgba(255, 255, 255, 0.1);
-	display: grid;
-	place-items: center;
-	border-radius: 4px;
-	transition: opacity 0.4s ease;
-}
-
-/**
-	loader--1
-**/
-.loader--1 {
-	--loader-size: calc(var(--block-size) / 3);
-	--anim-duration: 1s;
-	--loader-1-dist: calc(var(--loader-size) - var(--dot-size-half));
-	aspect-ratio: 1 / 1;
-	border: 1px solid var(--light-color);
-}
-
-.loader--1::before,
-.loader--1::after {
-	width: var(--dot-size);
-	aspect-ratio: 1 / 1;
-	background: currentColor;
-	border-radius: 50%;
-	top: var(--dot-size-half-neg);
-	animation: loader-1 var(--anim-duration) cubic-bezier(0.27, 0.08, 0.26, 1) infinite;
-}
-
-.loader--1::after {
-	animation-delay: calc(var(--anim-duration) / 4);
-}
-
-@keyframes loader-1 {
-	0%, 100% {
-		transform: none;
-	}
-	
-	75% {
-		transform: translateY(var(--loader-1-dist));
-	}
 }
 
 /**
@@ -385,7 +338,7 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 		animation-play-state: running;
 	}
 	
-	.snowflake:nth-of-type(1) {
+	.snowflake:nth-of-type(0) {
 		left: auto;
 		-webkit-animation-delay: 2s, 2s;
 		animation-delay: 2s, 2s
