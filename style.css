@@ -102,6 +102,12 @@ a:link {
     grid-template-columns: 3fr 2fr;
 }
 
+.grid-parent-3  {
+    display: grid;
+    grid-template-columns: repeat(3, 2fr);
+    grid-gap: 30px;
+}
+
 .centered { /* this centers it in the middle of the window */
   position: absolute;
   top: 50%;
