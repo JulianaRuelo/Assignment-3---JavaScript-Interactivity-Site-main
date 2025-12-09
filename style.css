@@ -117,6 +117,13 @@ a:link {
     grid-gap: 30px;
 }
 
+.wrapper {
+    max-width: 1275px;
+    margin: auto; 
+    /* centres the container */
+    padding: 80px;
+}
+
 .container {
   position: relative;
   text-align: center;
@@ -180,8 +187,6 @@ a:link {
     height: auto;
     z-index: -1;
 }
-
-
 
 .hover_image {
     display: flex;
@@ -353,8 +358,8 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
         width: 10vh;
         height: auto;
 		left: 25%;
-		-webkit-animation-delay: 1s, 2s;
-		animation-delay: 5s, 2s
+		-webkit-animation-delay: 3s, 2s;
+		animation-delay: 3s, 2s
 	}
 	
 	.snowflake:nth-of-type(2) {

@@ -39,18 +39,3 @@ const dropNote = document.getElementById("dropNote");
             audio.play();
             }
         });
-
-// //dropSound random marimba
-// var dropSound =["marimba1.mp3", "marimba2.mp3", "marimba3.mp3"] //<-- this is an array
-// var counter = 0;
-// //unamed function
-// $("#dropSound").on("keydown", function(randomMarimba){
-//     // // counter = counter + 1; <-- longform ver. like in processing
-//     // counter++; //<-- increment operator, to add a limit smth to do w/ a link, length and percent?? which goes into the logos[counter]
-//     var randomNum = Math.floor(Math.random()*dropSound.length)
-//     console.log(randomNum)
-//     $(this).attr("src", "assets/" + dropSound[randomNum]);
-//     if(counter == dropSound.length -1)  {
-//         counter = -1; //longform ver. like in processing
-//     }
-// })
