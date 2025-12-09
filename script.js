@@ -5,6 +5,7 @@ var score = 0;
 var notes =["heart.svg", "star.svg", "drop.svg"] //<-- this is an array
 var marimbaRandom = document.getElementById[("marimba1", "marimba2", "marimba3")]
 var counter = 0;
+var marimba;
 
 // ---------------------START OF THE GAME CODE
 //CREDITS
@@ -30,14 +31,14 @@ function tearDrop() {
     fill('#ACF5FF')
     noStroke()
   
-    translate(480, 350+myPosition)
+    translate(480, 80+myPosition)
     push();
 	  triangle(xposition-20.5,yposition,xposition+20.5,yposition,xposition,yposition-80)
     ellipse(xposition,yposition,40,40);
     pop();
 	var mySpeed = random(1, 10);
 	myPosition += mySpeed;
-	if (myPosition > 500){ 
+	if (myPosition > 400){ 
 		myPosition = 0; 
 	}
   pop()
@@ -48,14 +49,14 @@ function tearDrop() {
     fill('#ACF5FF')
     noStroke()
   
-    translate(1000, 350+myPosition)
+    translate(1000, 80+myPosition)
     push();
 	  triangle(xposition-20.5,yposition,xposition+20.5,yposition,xposition,yposition-80)
     ellipse(xposition,yposition,40,40);
     pop();
     //var mySpeed = 1;
 	myPosition += mySpeed;
-	if (myPosition > 500){ 
+	if (myPosition > 400){ 
 		myPosition = 0; 
 	}
   pop()
@@ -63,10 +64,12 @@ function tearDrop() {
 }
 
 function keyPressed()  {
-  if(key == 'j' && myPosition > 300 && myPosition <= 450)  {
+  if(key == 'j' && myPosition > 300 && myPosition <= 350)  {
+    marimba.play();
      score = score +10; 
   }
-  if(key == 'f' && myPosition > 300 && myPosition <= 450)  {
+  if(key == 'f' && myPosition > 300 && myPosition <= 350)  {
+    marimba.play();
      score = score +10; 
   }
 } //end of function keyPressed()
@@ -103,7 +106,7 @@ function eyes() {
 let stars = [];
 
 function setup() {
-  createCanvas(1440, 1000);
+  createCanvas(1440, 600);
   angleMode(DEGREES);
   for(let i = 0; i < 100; i++)  {
     stars.push(new Star())
@@ -115,14 +118,17 @@ function draw() {
   
   drawStars();
 
-  text("Your Score", 1300, 50);
-  text(score, 1300, 75);
+  push();
+  fill(255);
+  text("Your Score", 1100, 75);
+  text(score, 1100, 100);
+  pop();
   
   judgeLine();
   
   winCheck();
-
   tearDrop();
+  keyPressed();
 
 } //end of function draw 
 
@@ -170,19 +176,9 @@ class Star {
 // _____________________END OF THE GAME CODE
 
 // _____________________START OF SOUND
-const dropNote = document.getElementById("dropNote");
-        dropNote.addEventListener("keydown", (dropNotePressed) => {
-            if(dropNotePressed.key === 'j')  {
-                console.log('j pressed');
-            const Marimba = [
-            "assets/marimba1.mp3",
-            "assets/marimba2.mp3",
-            "assets/marimba3.mp3",
-            ];
-            const randomIndex = Math.floor(Math.random() * Marimba.length);
-            const randomMarimba = Marimba[randomIndex];
-            const audio = new Audio(randomMarimba);
-            audio.play();
-            }
-        });
+
+function marimba() {
+  marimba = loadSound("assets/marimba1.mp3");
+}
+
 // _____________________END OF SOUND
