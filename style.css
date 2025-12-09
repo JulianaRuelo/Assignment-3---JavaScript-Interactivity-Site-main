@@ -45,7 +45,7 @@ body{
 
 body {
     font-family: 'Dongle';
-    font-size: 2vw;
+    font-size: 3vw;
     color: #FF9EE2;
     padding: auto;
 }
@@ -75,6 +75,22 @@ h1:hover {
     text-shadow: 0px 10px 0px #ACF5FF, 0px 20px 0px #FF7FD9;
 }
 
+h2 {
+    display: flex;
+    width: auto;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    color: #200A3C;
+
+    text-align: center;
+    font-family: 'Dongle';
+    font-size: 5vw;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0px auto;
+}
+
 a:link {
   text-decoration: none;
   transition: 0.3s;
@@ -82,10 +98,10 @@ a:link {
 
 .center-top {
   position: absolute;
-  top: -82%;
+  top: -80%;
   left: 50%;
   transform: translate(-50%, 50%);
-  z-index: 10;
+  z-index: 1;
 }
 
 /* --------------------
@@ -157,24 +173,27 @@ canvas {
 
 /* Modal Content */
 .modal-content {
-  background-color: #fefefe;
+  background-color: #200A3C;
   margin: auto;
   padding: 20px;
-  border: 1px solid #888;
+  border-radius: 40px;
   width: 80%;
 }
 
-/* The Close Button */
+/* Close Button */
 .close {
   color: #aaaaaa;
   float: right;
-  font-size: 28px;
+  font-size: 8vw;
   font-weight: bold;
 }
 
 .close:hover,
 .close:focus {
-  color: #000;
+  background: linear-gradient(270deg, #FFE875 0%, #FF7FD9 50%, #ACF5FF 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   text-decoration: none;
   cursor: pointer;
 }
@@ -202,7 +221,7 @@ canvas {
     color: var(--horizontalDawnGradient, linear-gradient(270deg, #FFE875 0%, #FF7FD9 50%, #ACF5FF 100%));
 }
 
-.darkPurpleGradient {
+.darkPurple {
     color: var(--darkPurple #200A3C);
 }
 
@@ -329,18 +348,6 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 	100% {
 		transform: scale(1.8) translateZ(2vmin);
 	}
-}
-
-/**
-	loader--5
-**/
-.loader--5 {
-	--tilt-deg: 40deg;
-	--anim-duration: 0.6s;
-	aspect-ratio: 1 / 1;
-	perspective: 50vmin;
-	transform-style: preserve-3d;
-	animation: loader-5-1 calc(var(--anim-duration) * 3) linear alternate-reverse infinite;
 }
 
 

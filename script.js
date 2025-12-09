@@ -2,11 +2,6 @@ console.log("connected!")
 
 var score = 0;
 
-var notes =["heart.svg", "star.svg", "drop.svg"] //<-- this is an array
-var marimbaRandom = document.getElementById[("marimba1", "marimba2", "marimba3")]
-var counter = 0;
-var marimba;
-
 // ---------------------START OF THE GAME CODE
 //CREDITS
 //base code from Mr. Kitty Codes' Rhythm Game Tutorial on YouTube
@@ -16,11 +11,6 @@ var marimba;
 
 var yposition = 0;
 var xposition = 50;
-
-//bY and etc. is from mr kitty codes
-
-var bY = 0; //moves the note across the Y axis
-var score = 0;
 
 //from https://editor.p5js.org/SayTheYoung/sketches/o8G-3Cm1I
 myPosition = 0;
@@ -36,7 +26,7 @@ function tearDrop() {
 	  triangle(xposition-20.5,yposition,xposition+20.5,yposition,xposition,yposition-80)
     ellipse(xposition,yposition,40,40);
     pop();
-	var mySpeed = random(1, 10);
+	var mySpeed = 2;
 	myPosition += mySpeed;
 	if (myPosition > 400){ 
 		myPosition = 0; 
@@ -54,7 +44,7 @@ function tearDrop() {
 	  triangle(xposition-20.5,yposition,xposition+20.5,yposition,xposition,yposition-80)
     ellipse(xposition,yposition,40,40);
     pop();
-    //var mySpeed = 1;
+    var mySpeed = 2;
 	myPosition += mySpeed;
 	if (myPosition > 400){ 
 		myPosition = 0; 
@@ -65,11 +55,9 @@ function tearDrop() {
 
 function keyPressed()  {
   if(key == 'j' && myPosition > 300 && myPosition <= 350)  {
-    marimba.play();
      score = score +10; 
   }
   if(key == 'f' && myPosition > 300 && myPosition <= 350)  {
-    marimba.play();
      score = score +10; 
   }
 } //end of function keyPressed()
@@ -79,8 +67,9 @@ function keyPressed()  {
 function winCheck()  {
   if (score ==100)  {
     win = true
-    text("YOU WIN!", 150, 300);
-    myPosition = -100;
+    fill(255);
+    text("YOU WIN!", 10, 200);
+    myPosition = 0;
   } else  {
     win = false
   }
@@ -89,9 +78,8 @@ function winCheck()  {
 function judgeLine()  {
   push(); //pushMatrix();
   noStroke();
-  fill(20, 100, 240, 80);
-  rect(300, 850, 500, 10);
-  rect(300, 850, 500, 600);
+  fill(20, 240, 255, 100);
+  rect(0, 450, 1500, 600);
   pop(); //popMatrix();
   
 }
@@ -175,10 +163,31 @@ class Star {
 
 // _____________________END OF THE GAME CODE
 
-// _____________________START OF SOUND
 
-function marimba() {
-  marimba = loadSound("assets/marimba1.mp3");
+
+//MODAL CODE FROM W3SCHOOLS
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+  modal.style.display = "block";
 }
 
-// _____________________END OF SOUND
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
