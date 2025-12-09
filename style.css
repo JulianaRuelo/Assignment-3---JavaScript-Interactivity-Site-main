@@ -36,13 +36,6 @@ body{
 /* --------------------
 ---------TEXT----------
 -------------------- */
-/* h1 {
-    font-family: 'Nada';
-    font-size: 10vw;
-    font-weight: 500;
-    line-height: 1.6;
-} */
-
 body {
     font-family: 'Dongle';
     font-size: 3vw;
@@ -252,8 +245,8 @@ canvas {
     transition: background-image 0.3s ease-in-out; 
 }
 
-    /*
-Source - https://stackoverflow.com/a
+/*
+Source - https://stackoverflow.com/a/38805082
 Posted by Darío Pm, modified by community. See post 'Timeline' for change history
 Retrieved 2025-12-08, License - CC BY-SA 4.0
 */
@@ -281,7 +274,7 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 }
 
 
-/* below is from https://codepen.io/jenning/pen/LYWJdWz */
+/* from https://codepen.io/jenning/pen/LYWJdWz */
 .loader {
 	--loader-size: calc(var(--block-size) / 2);
 	--loader-size-half: calc(var(--loader-size) / 2);
@@ -349,60 +342,3 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 		transform: scale(1.8) translateZ(2vmin);
 	}
 }
-
-
-/* from Sadness on Code Pen --> https://codepen.io/sadness97/pen/mdOXzNW */
-	@-webkit-keyframes snowflakes-fall {
-		0% {
-			top: -10%
-		}
-		100% {
-			top: 100%
-		}
-	}
-	
-	@keyframes snowflakes-fall {
-		0% {
-			top: -10%
-		}
-		100% {
-			top: 100%
-		}
-	}
-	
-	.snowflake {
-		position: fixed;
-		top: -10%;
-		z-index: -2;
-		-webkit-user-select: none;
-		-moz-user-select: none;
-		-ms-user-select: none;
-		user-select: none;
-		-webkit-animation-name: snowflakes-fall;
-		-webkit-animation-duration: 10s, 3s;
-		-webkit-animation-timing-function: linear;
-		-webkit-animation-iteration-count: infinite;
-		-webkit-animation-play-state: running;
-		animation-name: snowflakes-fall;
-		animation-duration: 10s, 3s;
-		animation-timing-function: linear;
-		animation-iteration-count: infinite;
-		animation-play-state: running;
-        animation-range-start: 100px;
-	}
-	
-	.snowflake {
-        top: 30%;
-        max-width: 100%;
-        width: 10vh;
-        height: auto;
-		left: 25%;
-		-webkit-animation-delay: 3s, 2s;
-		animation-delay: 3s, 2s
-	}
-	
-	.snowflake:nth-of-type(2) {
-		left: 60%;
-		-webkit-animation-delay: 1s, 2s;
-		animation-delay: 2s, 2s
-	}

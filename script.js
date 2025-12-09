@@ -1,7 +1,5 @@
 console.log("connected!")
 
-var score = 0;
-
 // ---------------------START OF THE GAME CODE
 //CREDITS
 //base code from Mr. Kitty Codes' Rhythm Game Tutorial on YouTube
@@ -11,6 +9,7 @@ var score = 0;
 
 var yposition = 0;
 var xposition = 50;
+var score = 0;
 
 //from https://editor.p5js.org/SayTheYoung/sketches/o8G-3Cm1I
 myPosition = 0;
@@ -63,12 +62,11 @@ function keyPressed()  {
 } //end of function keyPressed()
 
 
-
 function winCheck()  {
   if (score ==100)  {
     win = true
     fill(255);
-    text("YOU WIN!", 10, 200);
+    text("YOU WIN!", 750, 200);
     myPosition = 0;
   } else  {
     win = false
@@ -78,8 +76,8 @@ function winCheck()  {
 function judgeLine()  {
   push(); //pushMatrix();
   noStroke();
-  fill(20, 240, 255, 100);
-  rect(0, 450, 1500, 600);
+  fill(172, 245, 255, 150);
+  rect(0, 450, 1920, 600);
   pop(); //popMatrix();
   
 }
@@ -94,9 +92,9 @@ function eyes() {
 let stars = [];
 
 function setup() {
-  createCanvas(1440, 600);
+  createCanvas(1920, 600);
   angleMode(DEGREES);
-  for(let i = 0; i < 100; i++)  {
+  for(let i = 0; i < 300; i++)  {
     stars.push(new Star())
   }
 }
@@ -104,19 +102,19 @@ function setup() {
 function draw() {
   background(32, 10, 60);
   
-  drawStars();
+  drawStars(); //this is the animated starry background
 
   push();
   fill(255);
-  text("Your Score", 1100, 75);
-  text(score, 1100, 100);
+  text("SCORE:", 1200, 75);
+  text(score, 1200, 100);
   pop();
   
   judgeLine();
   
-  winCheck();
   tearDrop();
   keyPressed();
+  winCheck();
 
 } //end of function draw 
 
