@@ -10,14 +10,15 @@
 
 <body>
 
-<!-- MENU BG IMGS -->
+<!---------- MENU ---------->
+<section id="main_menu">
 <div>
-        <!--
+<!--
 Source - https://stackoverflow.com/a
 Posted by Darío Pm, modified by community. See post 'Timeline' for change history
 Retrieved 2025-12-08, License - CC BY-SA 4.0
 -->
-    <a class="hover_image" href="game.html">
+    <a class="hover_image">
         <!-- path/to/first/visible/image: -->
         <img src="assets/closedEyes_hairBG.svg" />
         <!-- path/to/hover/visible/image: -->
@@ -26,9 +27,32 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 </div>
 
 <div>
-        <a href="game.html"><h1 class="center-top">Rain of Tears</h1></a>
+<!--
+Source - https://stackoverflow.com/a
+Posted by Daniel Hunter
+Retrieved 2025-12-09, License - CC BY-SA 3.0
+-->
+        <a href="#about_and_how-to"><h1 class="center-top">Rain of Tears</h1></a>
         <img class="fullSize" src="assets/waterJudgeLine.svg">
 </div>
+</section>
+
+<!---------- ABOUT/HOW-TO ---------->
+<section id="about_and_how-to">
+        <div class="grid-parent-split">
+                <div class="whiteContainer">
+                        <div><h1>About</h1></div>
+                </div>
+                <div class="whiteContainer">
+                        <div><h1>How To Play</h1></div>
+                </div>
+        </div>
+</section>
+
+<!---------- ABOUT/HOW-TO ---------->
+<section id="game">
+        <div><script src="script.js"></script></div>
+</section>
 
 
 <!-- SOUND EFFECTS -->
@@ -64,6 +88,8 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- ALWAYS PUT JAVASCRIPT AT THE BOTTOM HERE -->
 <script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.11/addons/p5.sound.min.js"></script>
 
 </body>
 

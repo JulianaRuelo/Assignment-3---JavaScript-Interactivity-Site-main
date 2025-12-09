@@ -91,6 +91,10 @@ a:link {
 /* --------------------
 --------LAYOUT---------
 -------------------- */
+canvas {
+  display: block;
+}
+
 #image {
     max-width: 18vh;
     height: auto;
