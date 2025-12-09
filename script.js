@@ -93,6 +93,10 @@ function judgeLine()  {
   
 }
 
+function eyes() {
+
+}
+
 //------------------------------------------star bg ver 
 //code I made for BG while adapting a tutorial https://editor.p5js.org/JulianaRuelo/sketches/-Ogi5SOhi
 
@@ -100,14 +104,14 @@ let stars = [];
 
 function setup() {
   createCanvas(1440, 1000);
-  
+  angleMode(DEGREES);
   for(let i = 0; i < 100; i++)  {
     stars.push(new Star())
   }
 }
 
 function draw() {
-  background(50, 0, 100);
+  background(32, 10, 60);
   
   drawStars();
 
@@ -120,7 +124,6 @@ function draw() {
 
   tearDrop();
 
-  
 } //end of function draw 
 
 function drawStars()  {
@@ -166,7 +169,7 @@ class Star {
 
 // _____________________END OF THE GAME CODE
 
-
+// _____________________START OF SOUND
 const dropNote = document.getElementById("dropNote");
         dropNote.addEventListener("keydown", (dropNotePressed) => {
             if(dropNotePressed.key === 'j')  {
@@ -182,3 +185,4 @@ const dropNote = document.getElementById("dropNote");
             audio.play();
             }
         });
+// _____________________END OF SOUND

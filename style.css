@@ -17,7 +17,7 @@ img {
 -------BACKGROUND------
 -------------------- */
 body{
-    background: var(--darkPurpleGradient, linear-gradient(180deg, #200A3C 0%, #4A3395 100%));
+    background: #200A3C;
 }
 
 /* --------------------
@@ -46,12 +46,12 @@ body{
 body {
     font-family: 'Dongle';
     font-size: 2vw;
-    color: #ACF5FF;
+    color: #FF9EE2;
     padding: auto;
 }
 
 h1 {
-    /* display: flex; */
+    display: flex;
     width: auto;
     height: auto;
     flex-direction: column;
@@ -60,7 +60,7 @@ h1 {
 
     text-align: center;
     font-family: 'Nada';
-    font-size: 12vw;
+    font-size: 10vw;
     font-weight: 400;
     line-height: normal;
     margin: 0px auto;
@@ -82,7 +82,7 @@ a:link {
 
 .center-top {
   position: absolute;
-  top: 10%;
+  top: -82%;
   left: 50%;
   transform: translate(-50%, 50%);
   z-index: 10;
@@ -170,16 +170,12 @@ canvas {
     color: var(--horizontalDawnGradient, linear-gradient(270deg, #FFE875 0%, #FF7FD9 50%, #ACF5FF 100%));
 }
 
-.brown {
-    color: #4D0803;
+.darkPurpleGradient {
+    color: var(--darkPurple #200A3C);
 }
 
 .offWhite {
     color: #F9F6EF;
-}
-
-.green {
-    color: #B9CB5F;
 }
 
 /* --------------------

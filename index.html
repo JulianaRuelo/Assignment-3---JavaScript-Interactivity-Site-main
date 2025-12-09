@@ -11,7 +11,7 @@
 <body>
 
 <!---------- MENU ---------->
-<section id="main_menu">
+<section id="menu">
 <div>
 <!--
 Source - https://stackoverflow.com/a
@@ -26,12 +26,7 @@ Retrieved 2025-12-08, License - CC BY-SA 4.0
     </a>
 </div>
 
-<div>
-<!--
-Source - https://stackoverflow.com/a
-Posted by Daniel Hunter
-Retrieved 2025-12-09, License - CC BY-SA 3.0
--->
+<div class="container">
         <a href="#about_and_how-to"><h1 class="center-top">Rain of Tears</h1></a>
         <img class="fullSize" src="assets/waterJudgeLine.svg">
 </div>
@@ -39,19 +34,31 @@ Retrieved 2025-12-09, License - CC BY-SA 3.0
 
 <!---------- ABOUT/HOW-TO ---------->
 <section id="about_and_how-to">
+        <div class="container">
         <div class="grid-parent-split">
                 <div class="whiteContainer">
-                        <div><h1>About</h1></div>
+                        <div><h2>About</h2></div>
                 </div>
                 <div class="whiteContainer">
-                        <div><h1>How To Play</h1></div>
+                        <div><h2>How To Play</h2></div>
                 </div>
+        </div>
         </div>
 </section>
 
-<!---------- ABOUT/HOW-TO ---------->
+<!---------- GAME ---------->
 <section id="game">
-        <div><script src="script.js"></script></div>
+        <div>
+        <main>
+        <a class="hover_image" href="#menu">
+        <!-- path/to/first/visible/image: -->
+        <img src="assets/closedEyes_hairBG.svg" />
+        <!-- path/to/hover/visible/image: -->
+        <img src="assets/openEyes_hairBG.svg" class="hide" />
+        </a>
+        <script src="script.js"></script>
+        </main>
+        </div>
 </section>
 
 
@@ -87,7 +94,6 @@ Retrieved 2025-12-09, License - CC BY-SA 3.0
 <!-- PUT JQUERY JUST ABOVE JAVASCRIPT -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <!-- ALWAYS PUT JAVASCRIPT AT THE BOTTOM HERE -->
-<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.11.11/addons/p5.sound.min.js"></script>
 
